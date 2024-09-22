@@ -11,13 +11,13 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 110vh;
+    height: 100vh;
 }
 
 .hnue {
     position: relative;
     text-align: center;
-    top: -100px;
+    top: -60px;
 }
 
 .hnue h5 {
@@ -39,7 +39,7 @@ img {
 
 .login-box {
     position: relative;
-    top: -50px;
+    top: -10px;
     background-color: #fff;
     text-align: left;
     padding: 20px 30px;
@@ -123,6 +123,8 @@ hr {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    top: 40px;
 }
 
 .copyright p {

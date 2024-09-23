@@ -114,7 +114,6 @@ hr {
 }
 
 .sign-up {
-    display: flex;
     padding: 10px 0;
 }
 
@@ -145,9 +144,3 @@ hr {
     width: 35px;
     height: auto;
 }
-
-
-
-
-
-

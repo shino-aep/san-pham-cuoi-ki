@@ -105,7 +105,6 @@ hr {
 }
 
 .sign-in {
-    display: flex;
     padding: 5px 0;
 }
 
@@ -138,9 +137,3 @@ hr {
     width: 35px;
     height: auto;
 }
-
-
-
-
-
-

@@ -1,32 +1,71 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Trang chủ - HNUE</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <link rel="icon" href="./assets/img/logo.png">
-        <link rel="stylesheet" href="./assets/css/home/style.css">
-    </head>
-    <body>
-        <header>          
-            <img src="assets/img/logo.png" alt="">
-            <nav class="navigition">
-                <a href="">TRANG CHỦ</a>
-                <a href="">GIỚI THIỆU</a>
-                <a href="">THÔNG BÁO</a>
-                <a href="">HỔ TRỢ</a>
-                <button class="btnLogin-popup" onclick="window.location.href='sign-in.html'">ĐĂNG NHẬP</button>
-            </nav>
-        </header>
-        <div class="text">
-            <p>TRƯỜNG ĐẠI HỌC SƯ PHẠM HÀ NỘI</p>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ - HNUE</title>
+
+    <link rel="stylesheet" href="./assets/css/home/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+    <div class="header">
+        <div class="banner">
+            <img src="./assets/img/logo_blue_hnue.svg" class="logo" alt="">
+            <div class="hnue">
+                <h4>TRƯỜNG ĐẠI HỌC SƯ PHẠM HÀ NỘI</h4>
+                <h5>HANOI NATIONAL UNIVERSITY OF EDUCATION</h5>
+            </div>
+            <div class="slog">
+                <p>"CHUẨN MỰC - SÁNG TẠO - TIÊN PHONG"</p>
+            </div>
         </div>
-        <div class="en-text">
-            <p>HANOI NATIONAL UNIVERSITY OF EDUCATION</p>
+        <div class="nav">
+            <a href="" class="a1">TRANG CHỦ</a>
+            <a href="">GIỚI THIỆU CÁC NGÀNH</a>
+            <a href="">ĐĂNG KÍ XÉT TUYỂN</a>
+            <button type="submit" class="btn">Đăng nhập</button>
         </div>
-        <footer>
-            
-        </footer>
-    </body>
+    </div>
+    <div class="content">
+        <div class="nfct">
+            <div class="head">
+                <i class="material-icons">cloud</i>
+                <h5>Thông báo</h5>
+            </div>
+            <div>
+                <ul>
+                    <!-- Thông báo sẽ xuất hiện ở đây -->
+                </ul>
+            </div>
+            <div class="pagination">
+                <!-- Nút phân trang -->
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="line-1">
+            <div class="item"><a href="">TRANG CHỦ</a></div>
+            <div class="item" id="i1"><a href="">TUYỂN SINH</a></div>
+            <div class="items">
+                <img src="./assets/img/logo_blue_hnue.svg" class="img" alt="">
+                <p>Copyright 2023 Trường Đại học Sư Phạm Hà Nội</p>
+            </div>
+            <div class="item" id="i2"><a href="">TUYỂN DỤNG</a></div>
+            <div class="item"><a href="">THƯ VIỆN</a></div>
+        </div>
+        <div class="line-2">
+            <div class="col-1">
+                <div class="item">Địa chỉ</div>
+                <div class="item">Trụ sở chính: 136 Xuân Thủy - Cầu Giấy - Hà Nội</div>
+                <div class="item">Phân hiệu Hà Nam: Lý Thường Kiệt, Lê Hồng Phong, Phủ Lý, Hà Nam</div>
+            </div>
+            <div class="col-2">
+                <div class="item">Email: <a href="">p.daotao@hnue.edu.vn</a></div>
+                <div class="item">Điện thoại: 0437.547.823</div>
+                <div class="item">Website: <a href=""> http://dtdh.hnue.edu.vn</a></div>
+            </div>
+        </div>
+    </div>
+</body>
 </html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Bảng Thông Báo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-container {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .form-container input, .form-container button {
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid #ddd;
+        }
+
+        .form-container input {
+            width: 300px;
+        }
+
+        .form-container button {
+            background-color: #07184A;
+            color: white;
+            cursor: pointer;
+        }
+
+        .notification-board {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .notification-header {
+            display: grid;
+            grid-template-columns: 1fr 3fr 1fr;
+            background-color: #07184A;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .notification-header div {
+            padding: 5px;
+        }
+
+        .notification-item {
+            display: grid;
+            grid-template-columns: 1fr 3fr 1fr;
+            border-bottom: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .notification-item:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .notification-item div {
+            padding: 5px;
+        }
+
+        .delete-btn {
+            background-color: #ff4d4d;
+            border: none;
+            color: white;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .delete-btn:hover {
+            background-color: #e60000;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Admin Bảng Thông Báo Tuyển Sinh</h1>
+
+    <!-- Form để admin nhập thông báo -->
+    <div class="form-container">
+        <input type="text" id="notificationInput" placeholder="Nhập thông báo tuyển sinh...">
+        <button onclick="addNotification()">Đăng thông báo</button>
+    </div>
+
+    <!-- Bảng thông báo -->
+    <div class="notification-board">
+        <!-- Header của bảng -->
+        <div class="notification-header">
+            <div>STT</div>
+            <div>Nội dung thông báo</div>
+            <div>Hành động</div>
+        </div>
+        
+        <!-- Danh sách các thông báo -->
+        <div id="notificationContainer">
+            <!-- Nội dung thông báo sẽ được thêm vào đây -->
+        </div>
+    </div>
+
+    <script>
+        // Biến để đếm số thứ tự thông báo
+        let notificationCount = 0;
+
+        // Hàm để thêm thông báo vào bảng
+        function addNotification() {
+            // Lấy giá trị từ input
+            const notificationInput = document.getElementById('notificationInput');
+            const notificationText = notificationInput.value.trim();
+
+            // Nếu không có nội dung thì không thêm
+            if (notificationText === '') {
+                alert('Vui lòng nhập nội dung thông báo.');
+                return;
+            }
+
+            // Tăng số thứ tự
+            notificationCount++;
+
+            // Tạo item mới
+            const notificationContainer = document.getElementById('notificationContainer');
+            const newItem = document.createElement('div');
+            newItem.classList.add('notification-item');
+
+            // Tạo ô cho STT
+            const sttDiv = document.createElement('div');
+            sttDiv.textContent = notificationCount;
+
+            // Tạo ô cho nội dung thông báo
+            const contentDiv = document.createElement('div');
+            contentDiv.textContent = notificationText;
+
+            // Tạo nút xóa
+            const actionDiv = document.createElement('div');
+            const deleteButton = document.createElement('button');
+            deleteButton.classList.add('delete-btn');
+            deleteButton.textContent = 'Xóa';
+            deleteButton.onclick = function() {
+                newItem.remove();
+                notificationCount--;
+            };
+            actionDiv.appendChild(deleteButton);
+
+            // Thêm các div vào item
+            newItem.appendChild(sttDiv);
+            newItem.appendChild(contentDiv);
+            newItem.appendChild(actionDiv);
+
+            // Thêm item vào container
+            notificationContainer.appendChild(newItem);
+
+            // Xóa nội dung trong ô input sau khi thêm
+            notificationInput.value = '';
+        }
+    </script>
+
+</body>
+</html>
